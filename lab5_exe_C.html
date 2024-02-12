@@ -2,7 +2,7 @@
 =========================================================
 Name        : lab5_exe_C.html
 Assignment  : Lab 5, Exercise C
-Author(s)   : Mahdi Ansari, William Arthur Philip Louis
+Author(s)   : Abdul Shakoor Raed, Wade Banman
 Submission  : May 21, 2030
 Description : DOM Elements.
 =========================================================
@@ -206,9 +206,20 @@ Description : DOM Elements.
 		<script>
 			document.addEventListener('DOMContentLoaded', function afterRender() {
 				// Task 1: Set the text content of all elements with the class 'companyName' and remove their border
+				var companyObjects = document.getElementsByClassName('companyName');
+
+				for (var i = 0; i < companyObjects.length; i++) {
+					companyObjects[i].textContent = 'Abdul Shakoor Raed';
+
+					companyObjects[i].style.border = 'none';
+				}
+
+				
 
 
 				// Task 2: Change the background color of the navigation bar
+
+				
 				
 
 				// Task 3: Hide the section titled 'What is full-stack?'
