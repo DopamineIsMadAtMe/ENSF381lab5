@@ -1,3 +1,15 @@
+// =========================================================
+// Name        : lab5_exe_Dmatrix.js
+// Assignment  : Lab 5, Exercise D Matrix part
+// Author(s)   : Abdul Shakoor Raed, Wade Banman
+// Submission  : February 12, 2024
+// Description : Matrices Operations Implementation
+// =========================================================
+// Your actual JavaScript code goes below this comment block
+// ...
+// ...
+
+
 function generateMatrices() {
     createMatrix('The 1st Matrix', 'matrix1', document.getElementById('matrix1Rows').value, document.getElementById('matrix1Cols').value);
     createMatrix('The 2nd Matrix','matrix2', document.getElementById('matrix2Rows').value, document.getElementById('matrix2Cols').value);
@@ -64,7 +76,7 @@ const showResult2D = (title, containerId, dataArray) => {
             td.appendChild(span);
             tr.appendChild(td);
         }
-        table.appendChild(tr);
+        table.prepend(tr);
     }
 
     let caption = table.createCaption();
