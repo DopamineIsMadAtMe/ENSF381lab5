@@ -229,9 +229,17 @@ Description : DOM Elements.
 				document.querySelector('article p').style.display = "none";
 
 				// Task 4: Create a new <p> element and append it to the 'About Us' section
+
+
+
 				var newp = document.createElement('p');
-				var aboutUs = document.querySelector('section h2 + p');
+				newp.textContent = 'This is a new paragraph.';
+				newp.style.color = 'red';
+				var aboutUs = document.querySelector('section p:last-child');
 				aboutUs.appendChild(newp);
+
+
+
 				// Task 5: Add placeholders to input elements based on their corresponding label IDs
                 var name = document.getElementById('name');
 				var email = document.getElementById('email');
@@ -243,20 +251,40 @@ Description : DOM Elements.
 
 
 				// Task 6: Set the src attribute of the image
-
+				var thing = document.querySelector('section img');
+				thing.src = './images/example.svg';
 
 
 				// Task 7: Add a new item in the navigation menu
+				var navbar = document.querySelector('nav ul');
+				var newitem = document.createElement('li');
+				var newa = document.createElement('a');
+				newa.href = '#';
+				newa.textContent = 'Blog';
+
+				newitem.appendChild(newa);
+				navbar.append(newitem);
 
 
 				// Task 8: Change the submit button text upon clicking and make it disabled
-
+				var submitButton = document.querySelector('input[type="button"]');
+    
+   				if (submitButton) {
+        			submitButton.addEventListener('click', function() {
+					this.value = 'Submitted';
+					this.disabled = true;
+        			});
+    			};
 
 				// Task 9: Change the text color of each item in the 'Related Links' to green
-
-
+				var extralinks = document.querySelectorAll('aside ul a');
+				extralinks.forEach(function(link){
+					link.setAttribute('style', 'color:green');
+				});
 				// Task 10: Add a red solid border to the footer
-			});
+				var footers = document.querySelector('footer');
+				footers.setAttribute('style', 'border: 2px solid red');
+				});
 		</script>
 	</body>
 </html>
