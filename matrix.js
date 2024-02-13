@@ -54,7 +54,7 @@ const showResult = (title, containerId, rows, cols, dataArray) => {
             td.appendChild(span);
             tr.appendChild(td);
         }
-        table.appendChild(tr);
+        table.prepend(tr);
     }
 
     let caption = table.createCaption();
