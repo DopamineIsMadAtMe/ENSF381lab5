@@ -104,11 +104,44 @@ const getMatrixData2D = function (matrixId) {
 // Add your matrix calculation functions here
 // The functions must check the posibility of calculation too.
 function addMatrices(matrix1, matrix2){ 
+    let sum_matrix = []; 
+for (let i = 0; i < matrix1.length; i++) { 
+    let s = ""; 
+    for (let j = 0; j < matrix1[i].length; j++) { 
+        s += matrix1[i][j] + matrix2[i][j] + " "; 
+    } 
+    resmat.push(s.trim()); 
+} 
+resmat.forEach(s => console.log(s));
+
 	// provide the code
 }
 const subtractMatrices = function (matrix1, matrix2) { 
 	// provide the code
-};
-const multiplyMatrices = (matrix1, matrix2) => { 
+    function subtractMatrices(matrix1, matrix2){ 
+        let subtracted_matrix = []; 
+    for (let i = 0; i < matrix1.length; i++) { 
+        let y = ""; 
+        for (let j = 0; j < matrix1[i].length; j++) { 
+            y -= matrix1[i][j] - matrix2[i][j] + " "; 
+        } 
+        resmat.push(y.trim()); 
+    } 
+    resultant_subtractedmatrix.forEach(y => console.log(y));
+    };
+}
+
+const multiplyMatrices = (matrix1, matrix2) => {
+    function multiplyMatrices(matrix1, matrix2){ 
+        let product_matrix = []; 
+    for (let i = 0; i < matrix1.length; i++) { 
+        let p = ""; 
+        for (let j = 0; j < matrix1[i].length; j++) { 
+            p *= matrix1[i][j] * matrix2[i][j] + " "; 
+        } 
+        resmat.push(p.trim()); 
+    } 
+    resmat.forEach(p => console.log(p));
 	// provide the code
-};
+    };
+}
